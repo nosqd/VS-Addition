@@ -59,7 +59,7 @@ dependencies {
     implementation(include("com.github.bawnorton.mixinsquared:mixinsquared-forge:${rootProject.mixin_squared}"))
 
     // Valkyrien Skies 2
-    modApi("org.valkyrienskies:valkyrienskies-120-forge:$vs2_version") { transitive = false }
+    modApi files("jars/valkyrienskies-120-2.3.0-beta.5+a9348063d0.jar")
 
     // VS Core
     implementation("org.valkyrienskies.core:api:$vs_core_version")
