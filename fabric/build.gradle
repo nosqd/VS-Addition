@@ -44,7 +44,7 @@ dependencies {
     modImplementation("me.shedaniel.cloth:cloth-config:${cloth_config_version}")
 
     // Valkyrien Skies 2
-    modApi files("jars/valkyrienskies-120-2.3.0-beta.5+a9348063d0.jar")
+    modApi("org.valkyrienskies:valkyrienskies-120-fabric:$vs2_version")
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionFabric")) { transitive false }

@@ -23,7 +23,7 @@ dependencies {
     implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:${rootProject.mixin_squared}"))
 
     // Valkyrien Skies 2
-    modApi files("jars/valkyrienskies-120-2.3.0-beta.5+a9348063d0.jar")
+    modApi("org.valkyrienskies:valkyrienskies-120-common:$vs2_version")
 
     // VS Core
     compileOnly("org.valkyrienskies.core:api:${rootProject.vs_core_version}")
