@@ -1,16 +1,7 @@
-package io.github.xiewuzhiying.vs_addition.mixin.valkyrienskies;
+package io.github.xiewuzhiying.vs_addition.mixin.valkyrienskies.client;
 
-import com.bawnorton.mixinsquared.TargetHandler;
-import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
-import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import io.github.xiewuzhiying.vs_addition.util.AirPocketUtils;
 import net.minecraft.client.Camera;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.AABB;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-
-import java.util.function.Consumer;
 
 @Mixin(value = Camera.class, priority = 1500)
 public abstract class MixinCamera {
