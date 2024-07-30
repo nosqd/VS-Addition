@@ -28,7 +28,7 @@ public class AirPocketUtils {
             } else {
                 shipConnData = null;
             }
-            ships.add(Pair.of(ship, shipConnData != null && shipConnData.getAirPocketFromPoint(VectorConversionsMCKt.toJOML(TransformUtils.floorToVec3i(aabb.getCenter()))) != null));
+            ships.add(Pair.of(ship, shipConnData != null && shipConnData.getAirPocketFromPoint(TransformUtils.floorToVector3i(ship.getWorldToShip().transformPosition(VectorConversionsMCKt.toJOML(aabb.getCenter())))) != null));
         });
         ships.sort(Comparator.comparingDouble(pair -> calculateAabbVolume(pair.getLeft())));
         List<Ship> newShips = new ArrayList<>();
@@ -43,6 +43,8 @@ public class AirPocketUtils {
                 cb.accept(ship != null ? VectorConversionsMCKt.toMinecraft(VectorConversionsMCKt.set(tmpAABB, aabb).transform(ship.getWorldToShip())) : VectorConversionsMCKt.toMinecraft(VectorConversionsMCKt.set(tmpAABB, aabb)))
         );
     }
+
+
 
     public static int calculateAabbVolume(@Nullable Ship ship) {
         if(ship == null)

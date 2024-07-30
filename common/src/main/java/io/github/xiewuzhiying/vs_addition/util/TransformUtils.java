@@ -33,6 +33,18 @@ public class TransformUtils {
         return VectorConversionsMCKt.toMinecraft(vector3d);
     }
 
+    public static Vector3i floorToVector3i(Vector3d vec){
+        return new Vector3i((int)Math.floor(vec.x), (int)Math.floor(vec.y), (int)Math.floor(vec.z));
+    }
+
+    public static Vector3i floorToVector3i(Vec3 vec){
+        return new Vector3i((int)Math.floor(vec.x), (int)Math.floor(vec.y), (int)Math.floor(vec.z));
+    }
+
+    public static Vector3i floorToVector3i(Vector3f vec){
+        return new Vector3i((int)Math.floor(vec.x), (int)Math.floor(vec.y), (int)Math.floor(vec.z));
+    }
+
     public static Vec3i floorToVec3i(Vector3d vec){
         return new Vec3i((int)Math.floor(vec.x), (int)Math.floor(vec.y), (int)Math.floor(vec.z));
     }
